@@ -3,7 +3,12 @@ import { useState, useEffect } from 'react'
 import NewsCard from './NewsCard'
 
 function NewsFeed () {
-const [stories, setStories] = useState([]) 
+const [stories, setStories] = useState([]);
+const [selectedStory, setSelectedStory] = useState(null);
+
+const handleNewsCardClick = (story) => {
+  setSelectedStory(story);
+};
 
 const getTopStories = () => {
   return fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=6407e766ab484afd83a05c0442070e2b`)
@@ -22,7 +27,7 @@ const getTopStories = () => {
       const cleanedData = data.articles.filter(article =>
         article.content && article.author && article.urlToImage && article.description
       );
-      
+
       setStories(cleanedData);
     })
     .catch(error => {
@@ -41,7 +46,7 @@ useEffect(() => {
   return (
     <section>
       {stories.map((story, index) => 
-        <NewsCard key={index} story={story}/>
+        <NewsCard key={index} story={story} onClick={handleNewsCardClick}/>
       )}
     </section>
   )
