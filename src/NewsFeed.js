@@ -45,8 +45,12 @@ useEffect(() => {
 
   return (
     <section>
-      {stories.map((story, index) => 
-        <NewsCard key={index} story={story} onClick={handleNewsCardClick}/>
+      {selectedStory ? (
+        <Article selectedStory={selectedStory} />
+      ) : (
+        stories.map((story, index) => (
+          <NewsCard key={index} story={story} onClick={handleNewsCardClick} />
+        ))
       )}
     </section>
   )
