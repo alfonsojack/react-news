@@ -1,6 +1,7 @@
 import './NewsFeed.css'
 import { useState, useEffect } from 'react'
 import NewsCard from './NewsCard'
+import Article from './Article';
 
 function NewsFeed () {
 const [stories, setStories] = useState([]);
