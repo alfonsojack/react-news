@@ -1,0 +1,12 @@
+.NewsCard {
+  border-bottom: black 1px solid;
+}
+
+.story-image {
+  height: 40vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
