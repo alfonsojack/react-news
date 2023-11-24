@@ -1,0 +1,68 @@
+.filter {
+  width: 30vw;
+  background:black;
+  position: fixed;
+  height: 100vh;
+}
+
+.search-container {
+  width: 30vw;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search {
+  border: gray 1px solid;
+  text-align: center;
+  font: .9em;
+  flex: 1; /* Take up all available space */
+  width: 25vw;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.search-button {
+  background: white;
+  border: 1px gray solid;
+  border-left: 0;
+  font-size: .7em;
+  padding: .2rem;
+  width: 5vw;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.icon-search {
+  height: 2rem;
+}
+
+.primary {
+  fill: none
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid white
+}
+
+.icon-news {
+  height: 3rem
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.logo-primary {
+  fill: white
+}
+
+.logo-secondary {
+  fill:black
+}
