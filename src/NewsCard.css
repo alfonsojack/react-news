@@ -1,5 +1,8 @@
 .NewsCard {
   border-bottom: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .story-image {
