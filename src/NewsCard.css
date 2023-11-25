@@ -3,22 +3,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70vw;
+  width: 60vw;
   box-sizing: border-box;
-  padding-bottom: 0.5rem;
-  transition: height 0.3s ease-in-out;
+  padding-bottom: .5rem;
 }
+
+/* .story-image {
+  height: 40vh;
+} */
+
 
 .card-top {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  /* background-color: gray; */
   padding: 1rem;
   padding-top: 0;
   padding-bottom: 0;
   box-sizing: border-box;
-  color: gray;
+  color: gray
 }
 
 .description {
@@ -37,12 +42,12 @@
 .content {
   max-width: 40vw;
   margin: 0;
-  margin-bottom: 0.2rem;
+  margin-bottom: .2rem;
 }
 
 .icon-cheveron-down {
   height: 2rem;
-  margin: 0.5rem;
+  margin: .5rem;
 }
 
 .down-secondary {
@@ -52,9 +57,8 @@
 .expand-btn {
   border: none;
   background: none;
-  height: 2rem;
+  height: 2rem
 }
-
 .image-container {
   position: relative;
   display: inline-block;
@@ -71,7 +75,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Adjust to match the height of the image */
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   opacity: 0;
@@ -82,24 +86,31 @@
   justify-content: center;
 }
 
+.image-container:hover .description-overlay {
+  opacity: 1;
+}
+
 .expanded-view {
   display: flex;
   flex-direction: column;
-  transition: height 0.3s ease-in-out;
-  overflow: hidden;
   animation: dropDown 1s;
-
-}
-
-.NewsCard:not(.expanded) .expanded-view {
-  max-height: 0;
 }
 
 @keyframes dropDown {
   from {
-    height: 0;
+    height: 0%
   }
   to {
-    height: 100%;
+    height: 100%
   }
+}
+
+.source-tag:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.source-link {
+  text-decoration: none;
+  color: gray
 }
