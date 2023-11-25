@@ -3,6 +3,7 @@
   background:black;
   position: fixed;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 .search-container {
@@ -14,21 +15,24 @@
 }
 
 .search {
-  border: gray 1px solid;
-  text-align: center;
+  border: black 1px solid;
+  padding-left: 1rem;
+  /* text-align: center; */
   font: .9em;
   flex: 1; /* Take up all available space */
   width: 25vw;
+  height: 6vh;
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
 .search-button {
   background: white;
-  border: 1px gray solid;
+  border: 1px black solid;
   border-left: 0;
   font-size: .7em;
   padding: .2rem;
   width: 5vw;
+  height: 6vh;
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
@@ -46,17 +50,31 @@ button:hover {
 
 input:focus {
   outline: none;
-  border: 1px solid white
+  border: 1px solid gray
 }
 
 .icon-news {
-  height: 3rem
+  height: 3rem;
+  justify-self: flex-start ;
+  /* position: absolute;
+  top: 20px;
+  left: 20px */
 }
 
 .logo {
   display: flex;
   align-items: center;
   color: white;
+  padding-left: .5rem;
+
+
+  justify-content: center;
+}
+
+.site-title {
+  justify-self: center;
+  font-size: 1.5rem;
+  padding-left: .5rem;
 }
 
 .logo-primary {
@@ -65,4 +83,23 @@ input:focus {
 
 .logo-secondary {
   fill:black
+}
+
+.filter-title {
+  font-weight: 800;
+}
+
+.filter-title, .category {
+  height: 7vh;
+  color: white;
+  /* border: 1px white solid; */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category {
+  background-color: gray;
+  border: 1px black solid
 }
