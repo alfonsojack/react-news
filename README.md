@@ -1,6 +1,6 @@
 <div align="center">
   
-# [React News](react-news-self.vercel.app)
+# [React News](https://react-news-self.vercel.app)
 
   
 ##### Built With:
