@@ -1,12 +1,13 @@
 import './Home.css'
 import React, { useState, useEffect } from 'react';
-import { Route, Switch, useParams, useLocation } from 'react-router-dom';
+import { Route, Switch, useParams, useLocation, useNavigate } from 'react-router-dom';
 import Article from './Article';
 import NewsFeed from './NewsFeed';
 
 function Home() {
   const { sourceId } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const [stories, setStories] = useState([]);
 
   const getTopStories = () => {
@@ -31,6 +32,7 @@ function Home() {
       })
       .catch(error => {
         console.error('Error:', error);
+        navigate(`/error/${error.message}`);
       });
   };
 
@@ -53,6 +55,7 @@ function Home() {
       })
       .catch(error => {
         console.error('Error:', error);
+        navigate(`/error/${error.message}`);
       });
   };
 
@@ -63,7 +66,7 @@ function Home() {
     }
   }, [location.pathname]);
 
-  
+
   useEffect(() => {
   
     const isSourceRoute = location.pathname.startsWith('/source/');

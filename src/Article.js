@@ -50,6 +50,7 @@ function Article({ onSearch, onCategoryClick }) {
       navigate(`/search/${searchQuery}`);
     } catch (error) {
       console.error('Error fetching data:', error);
+      navigate(`/error/${error.message}`);
     }
   };
 
