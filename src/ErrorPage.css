@@ -8,11 +8,14 @@
   justify-content: center;
   color: hsl(360, 92%, 20%);
   font-family: 'Jost', sans-serif;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  box-sizing: border-box;
 }
 
 .error-msg {
   margin: 0;
-  max-width: 70vw;
+  max-width: 80vw;
   font-size: 3rem;
 }
 
