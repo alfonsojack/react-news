@@ -18,7 +18,7 @@ function NewsCard({ story }) {
   return (
     <div className={`NewsCard ${moreInfo ? 'expanded' : ''}`}>
       <div className='card-top'>
-        <p>{formattedDate}</p>
+        <p className='source-link'>{formattedDate}</p>
         <Link className='source-link' to={`/source/${story.source.id}`}>
           <p className='source-tag'>{story.source.name}</p>
         </Link>
@@ -50,7 +50,7 @@ function NewsCard({ story }) {
           <div className='expanded-view'>
             <p className='content'>{story.content.replace(/\[.*?\]/g, '')}</p>
             <Link className='read-more' to={story.url} target="_blank" rel="noopener noreferrer">
-              [Read full article]
+              Read full article
             </Link>
             <button className='expand-btn' onClick={handleSeeMoreClick}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon-cheveron-down">

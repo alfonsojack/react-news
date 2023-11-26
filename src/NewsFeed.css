@@ -5,4 +5,5 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  background-color: hsl(212, 33%, 89%);
 }

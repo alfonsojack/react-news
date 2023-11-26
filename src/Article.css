@@ -1,6 +1,6 @@
 .filter {
   width: 30vw;
-  background:black;
+  background:hsl(205, 76%, 39%);
   position: fixed;
   height: 100vh;
   box-sizing: border-box;
@@ -12,22 +12,28 @@
 
 .search-container {
   display: flex;
+  align-items: center;
 }
 
 .search {
-  border: black 1px solid;
+  /* border: hsl(205, 76%, 39%) 1px solid; */
   padding-left: 1rem;
+  /* border-color: hsl(205, 76%, 39%); */
+  border: 2px outset hsl(205, 76%, 39%);
   /* text-align: center; */
-  font: .9em;
+  font-size: 1rem;
   flex: 1; /* Take up all available space */
   width: 25vw;
   height: 6vh;
+  color: hsl(209, 61%, 16%);
+  font-family: 'EB Garamond', 'serif';
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
 .search-button {
-  background: white;
-  border: 1px black solid;
+  background: hsl(205, 82%, 33%);
+  /* border: 1px hsl(205, 76%, 39%) solid; */
+  border: 2px outset hsl(205, 76%, 39%);
   border-left: 0;
   font-size: .7em;
   padding: .2rem;
@@ -36,21 +42,36 @@
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
+.search-button:active {
+  border: 2px inset hsl(205, 76%, 39%)
+}
+
 button:hover {
   cursor: pointer;
 }
 
 .icon-search {
-  height: 2rem;
+  height: 1.5rem;
+  fill: hsl(209, 61%, 16%)
 }
 
 .primary {
   fill: none
 }
 
+.search-secondary {
+  fill: hsl(212, 33%, 89%)
+}
+
+input {
+  background-color: hsl(210, 31%, 80%);
+  color: hsl(209, 61%, 16%)
+}
+
 input:focus {
   outline: none;
-  border: 1px solid gray
+  background-color: hsl(212, 33%, 89%);
+  border: 2px inset hsl(205, 76%, 39%)
 }
 
 .icon-news {
@@ -64,7 +85,7 @@ input:focus {
 .logo {
   display: flex;
   align-items: center;
-  color: white;
+  color: hsl(210, 36%, 96%);
   padding-left: .5rem;
   text-decoration: none;
 
@@ -73,36 +94,47 @@ input:focus {
 
 .site-title {
   justify-self: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-left: .5rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
 }
 
 .logo-primary {
-  fill: white
+  fill: hsl(210, 36%, 96%)
 }
 
 .logo-secondary {
-  fill:black
+  fill:hsl(205, 76%, 39%)
 }
 
 .filter-title {
-  font-weight: 800;
+  font-weight: 600;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2rem;
+  color: hsl(210, 31%, 80%);
+  border: 2px outset hsl(205, 76%, 39%);
 }
 
 .filter-title, .category {
-  height: 7vh;
-  color: white;
+  height: 10vh;
   /* border: 1px white solid; */
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .category {
-  background-color: gray;
-  border: 1px black solid;
+  background-color: hsl(205, 82%, 33%);
+  border-color: hsl(205, 76%, 39%);
   text-decoration: none;
+  color: hsl(210, 36%, 96%);
+  font-family: 'EB Garamond', 'serif';
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 2px outset hsl(205, 76%, 39%);
 }
 
 .category:hover {
@@ -110,5 +142,6 @@ input:focus {
 }
 
 .category:active {
-  background-color: darkgray
+  background-color:hsl(205, 100%, 21%);
+  border: 2px inset hsl(205, 76%, 39%)
 }
