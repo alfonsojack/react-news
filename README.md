@@ -11,6 +11,8 @@
 ## Abstract:
 Welcome to React News
 
+This app allows users to view consistently updated news. Filtering by topic or news source, or searching by keywords, users can curate their feed and be directed to the stories they wish to read. This app is possible thanks to the [Newscatcher API](https://newscatcherapi.com/)
+
 ## Preview of App: 
 
 
