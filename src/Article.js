@@ -69,6 +69,11 @@ function Article({ onSearch, onCategoryClick }) {
     handleSearch(categoryId);
   };
 
+  const handleSearchButtonClick = () => {
+    handleSearch(searchQuery);
+    navigate(`/search/${searchQuery}`);
+  };
+
   return (
     <aside className='filter'>
       <Link to='/' className='logo'>
@@ -84,16 +89,16 @@ function Article({ onSearch, onCategoryClick }) {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <button className='search-button' onClick={handleSearch}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon-search"><circle cx="10" cy="10" r="7" className="primary"/><path className="search-secondary" d="M16.32 14.9l1.1 1.1c.4-.02.83.13 1.14.44l3 3a1.5 1.5 0 0 1-2.12 2.12l-3-3a1.5 1.5 0 0 1-.44-1.14l-1.1-1.1a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg></button>
+        <button className='search-button' onClick={handleSearchButtonClick}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon-search"><circle cx="10" cy="10" r="7" className="primary"/><path className="search-secondary" d="M16.32 14.9l1.1 1.1c.4-.02.83.13 1.14.44l3 3a1.5 1.5 0 0 1-2.12 2.12l-3-3a1.5 1.5 0 0 1-.44-1.14l-1.1-1.1a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/></svg></button>
       </div>
       <div className='filter-container'>
         <p className='filter-title'>Categories</p>
-        <NavLink to='/' className='category' >Top Stories</NavLink>
-        <NavLink to='/search/business' className='category' >Business</NavLink>
-        <NavLink to='/search/technology' className='category'>Technology</NavLink>
-        <NavLink to='/search/sports' className='category'>Sports</NavLink>
-        <NavLink to='/search/music' className='category'>Music</NavLink>
-        <NavLink to='/search/movies' className='category'>Movies</NavLink>
+        <NavLink to='/' className='category' id={location.pathname === '/' ? 'active' : ''}>Top Stories</NavLink>
+        <NavLink to='/search/business' className='category' id={location.pathname === '/search/business' ? 'active' : ''}>Business</NavLink>
+        <NavLink to='/search/technology' className='category' id={location.pathname === '/search/technology' ? 'active' : ''}>Technology</NavLink>
+        <NavLink to='/search/sports' className='category'  id={location.pathname === '/search/sports' ? 'active' : ''}>Sports</NavLink>
+        <NavLink to='/search/music' className='category'  id={location.pathname === '/search/music' ? 'active' : ''}>Music</NavLink>
+        <NavLink to='/search/movies' className='category'  id={location.pathname === '/search/movies' ? 'active' : ''}>Movies</NavLink>
         <p></p>
       </div>
     </aside>

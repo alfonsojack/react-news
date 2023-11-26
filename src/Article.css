@@ -145,3 +145,8 @@ input:focus {
   background-color:hsl(205, 100%, 21%);
   border: 2px inset hsl(205, 76%, 39%)
 }
+
+#active {
+  background-color: hsl(205, 100%, 21%);
+  border: 2px inset hsl(205, 76%, 39%);
+}
