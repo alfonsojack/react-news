@@ -70,9 +70,13 @@ function Article({ onSearch, onCategoryClick }) {
   };
 
   const handleSearchButtonClick = () => {
+    if (searchQuery) {
     handleSearch(searchQuery);
     navigate(`/search/${searchQuery}`);
     setSearchQuery('')
+    } else {
+      console.error('Search query cannot be empty');
+    }
   };
 
   return (
