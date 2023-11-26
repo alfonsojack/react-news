@@ -11,8 +11,8 @@ function NewsFeed ({ stories }) {
 
 
   return (
-    <section className='NewsFeed'>
-      <div>
+    <section >
+      <div className='NewsFeed'>
         {stories.map((story, index) => (
           <NewsCard key={index} story={story} />
         ))

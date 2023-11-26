@@ -88,7 +88,7 @@ input:focus {
   color: hsl(210, 36%, 96%);
   padding-left: .5rem;
   text-decoration: none;
-
+  border-right: 2px outset hsl(205, 76%, 39%);
   justify-content: center;
 }
 
@@ -117,7 +117,7 @@ input:focus {
 }
 
 .filter-title, .category {
-  height: 10vh;
+  height: 11vh;
   /* border: 1px white solid; */
   margin: 0;
   display: flex;

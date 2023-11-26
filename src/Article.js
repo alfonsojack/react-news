@@ -72,6 +72,7 @@ function Article({ onSearch, onCategoryClick }) {
   const handleSearchButtonClick = () => {
     handleSearch(searchQuery);
     navigate(`/search/${searchQuery}`);
+    setSearchQuery('')
   };
 
   return (
@@ -98,8 +99,7 @@ function Article({ onSearch, onCategoryClick }) {
         <NavLink to='/search/technology' className='category' id={location.pathname === '/search/technology' ? 'active' : ''}>Technology</NavLink>
         <NavLink to='/search/sports' className='category'  id={location.pathname === '/search/sports' ? 'active' : ''}>Sports</NavLink>
         <NavLink to='/search/music' className='category'  id={location.pathname === '/search/music' ? 'active' : ''}>Music</NavLink>
-        <NavLink to='/search/movies' className='category'  id={location.pathname === '/search/movies' ? 'active' : ''}>Movies</NavLink>
-        <p></p>
+        <NavLink to='/search/movies' className='category'  id={location.pathname === '/search/movies' ? 'active' : ''}>Art</NavLink>
       </div>
     </aside>
   );

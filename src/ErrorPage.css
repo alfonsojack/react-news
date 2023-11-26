@@ -11,7 +11,17 @@
 }
 
 .error-msg {
-  margin: 0
+  margin: 0;
+  max-width: 70vw;
+  font-size: 3rem;
+}
+
+.error-sub {
+  max-width: 50vw;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: .5rem;
+  font-family: 'EB Garamond', 'serif';
 }
 
 .error-img {
