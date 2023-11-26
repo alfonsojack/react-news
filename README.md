@@ -22,6 +22,7 @@ This app allows users to view consistently updated news. Filtering by topic or n
 
 ## Context:
 
+This app was created as an assignment from the Turing School of Software and Design. 
 
 ## Learning Goals:
 
