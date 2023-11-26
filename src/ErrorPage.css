@@ -16,14 +16,15 @@
 .error-msg {
   margin: 0;
   max-width: 80vw;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .error-sub {
   max-width: 50vw;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   margin-top: .5rem;
+  font-weight: 400;
   font-family: 'EB Garamond', 'serif';
 }
 
