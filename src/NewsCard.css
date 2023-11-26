@@ -69,8 +69,15 @@
 .expand-btn {
   border: none;
   background: none;
-  height: 2rem
+  height: 2rem;
+  margin-bottom: 1rem;
 }
+
+.icon-cheveron-down:hover, .icon-cheveron-up:hover{
+  border-radius: 100%;
+  background-color: rgba(33, 94, 128, 0.5);
+}
+
 .image-container {
   position: relative;
   display: inline-block;
